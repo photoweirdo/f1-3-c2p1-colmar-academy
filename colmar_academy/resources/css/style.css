@@ -1,0 +1,447 @@
+
+
+/* Universal Styles */
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: inherit; /*from the one we se for li*/
+}
+
+
+#mobile_header {
+  display:none;
+}
+
+/*desktop header styles*/
+
+#desktop_header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:16px 24px;
+}
+#company_logo{
+  display:flex;
+  align-items:center;
+  font-variant: small-caps;
+  height:32px;
+}
+#company_logo img {
+  position:relative;
+  top:0.3rem;
+}
+
+
+nav li {
+  font-size: 1.5rem;
+  display:inline;
+  margin-left: 16px;
+}
+nav li a:hover {
+  font-weight:600;;
+}
+nav li:first-child{
+  margin-left: 0px;
+}
+#company_logo h1 {
+  color:black;
+  font-weight:600;
+  font-size:2.2rem; /*24px*/
+}
+#company_logo h1 span {
+  font-size:2.2rem;
+  font-weight:600;
+  color:#9b9b9b;
+}
+
+/*mobile header styles*/
+
+@media only screen and (max-width: 480px) {
+  #desktop_header {
+        display: none;
+
+    }
+    #mobile_header {
+    display:flex;
+    height: 4rem;
+    justify-content: space-around;
+    align-items: center;
+    margin:0;
+    }
+}
+
+/*banner styles*/
+
+#banner {
+  width:100%;
+  background-color:#d8d8d8;
+  display:flex;
+  align-items:center;
+}
+#banner_image {
+         width:60%;
+         margin:32px 24px;
+}
+#banner_image img {
+         display: block;
+         max-width: 100%;
+         height:auto;
+}
+#banner_text {
+         color:4a4a4a;
+        width:30%;
+}
+#banner a {
+         display:block;
+         text-align:center;
+         padding:8px 0;
+         color:#FFF;
+         background-color:#4a4a4a;
+         font-size:1.2rem;
+}
+#banner_text h1 {
+  font-family:"Francois One", sans-serif;
+  font-size:3.5rem;
+  font-style:bold;;
+  letter-spacing:0.1rem;
+}
+#banner_text h2 {
+  font-size:1.2rem;
+  font-style:bold;
+}
+#banner_text h1, #banner_text h2 {
+  margin-bottom:24px;
+}
+
+/* banner mobile styles */
+
+@media only screen and (max-width: 480px) {
+  #banner {
+    width:100%;
+    background-color:#d8d8d8;
+    padding:32px 0px 32px 0px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  #banner_image {
+    width:100%;
+    margin:0;
+  }
+  #banner_text {
+    width:100%;
+    padding: 32px 0px 24px 0px;
+  }
+  #banner a {
+    background-color:#9b9b9b;
+  }
+  #banner_text h1 {
+    font-size:3.2rem;
+    letter-spacing:0;
+  }
+  #banner_text h1 {
+    margin-left:16px;
+    margin-bottom:32px;
+  }
+  #banner_text h2 {
+    margin-left:16px;
+    margin-bottom:24px;
+  }
+}
+
+/*information styles*/
+
+#mobile_information {
+  display:none;
+}
+#information {
+  padding:32px 0 32px 24px;/* because of margin-collapse I cannot put a top-margin on the image*/
+  display:flex;
+  align-items:center;
+  width:100%;
+}
+#left_box {
+  max-width:60%;
+  height:auto;
+}
+#left_box_image img{
+  display:block;
+  width:100%;
+}
+#left_box_text {
+  text-align:left;
+  padding:32px 24px 0 0;
+}
+#right_box {
+  width:40%;
+  display:block;
+}
+#container {
+  width:100%;
+  padding:32px 0px 32px 24px;
+  display:flex;
+  align-items:flex-start;
+}
+#left {
+  width:60%;
+  background-color:#fff;
+}
+
+#left_box_text h1 {
+  font-family:"Francois One", sans-serif;
+  font-size:2.7em;
+  margin: 0 0 24px 0;
+}
+ #left_box_text p {
+   margin:24px 0;
+}
+ #left_box_text h6 {
+   margin:24px 0 0 0;
+}
+#right {
+  margin-left:24px;
+  width:calc(40% - 48px);
+}
+ /*cannot have a margin-right of 24px on the img because it won't align anymore with the banner's image*/
+#box1, #box2, #box3 {
+  display:flex;
+}
+#box1 {
+  padding:0px 0 16px 16px;
+}
+#box2 {
+    padding:16px 0 16px 16px;
+}
+#box3 {
+  padding:16px 0 16px 16px;
+}
+.box_caption {
+  width:35%;
+  margin-right:16px;
+}
+.right_column_image {
+  width:100%;
+  height:auto;
+}
+.right_text {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.right_text h1, .right_text p {
+  margin-bottom:8px;
+}
+#container, #box1, #box2 {
+   background-color:#fff;
+}
+#box3 {
+  background-color:#d8d8d8;
+}
+#box1 a, #box2 a, #box3 a {
+  color:#4a90e2;
+}
+.right_text h1 {
+  font-size:1.5rem;
+  font-weight:600;
+}
+.right_text  a:hover {color:#fff;
+  font-weight:600;
+}
+#left_box_text h1, #left_box_text p {
+  margin:24px 0;
+}
+
+/* mobile information styles */
+
+@media only screen and (max-width: 480px) {
+  #container {
+    display:none;
+  }
+  #mobile_information {
+    display:block;
+  }
+  #box1, #box2, #box3 {
+    display:block;
+    margin:16px 16px 48px 16px;
+    padding:0;
+  }
+  .box_caption {
+    width:100%;
+    margin-bottom:24px;
+  }
+  .right_text {
+    padding-left:16px;
+  }
+  #box3 {
+    background-color:#fff;
+  }
+}
+
+/*courses styles*/
+
+#learning_section_wrapper_mobile {
+  display:none;
+}
+#learning_section_wrapper {
+  padding:32px 56px;/*this is tricky:since each "course" box has a margin-right of 16px,we have to take that amount off from the 72px we want*/
+  background-color:#eaebec;
+}/*wrapper necessary in order to create space around everything in this section*/
+.section_title {
+  font-family:"Francois One", sans-serif;
+  font-size:2.7em;
+  text-align:center;
+  margin-bottom:32px;
+}
+#courses_box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.course img {
+  display: block;
+  max-width:100%;/*necessary in order to make the image shrink and expand*/
+}
+.course {
+   width: calc(33.3333% - 16px);/* because each image plus right margin will take up an extra 16px*/
+   margin:0 16px 32px 0;
+   background-color:#fff;/* this is "hiding" the fact that all the text boxes are not the same height*/
+}
+ .course h1 {
+   font-size:1.5rem;
+   font-weight:600;
+}
+ .courses_listing {
+   background-color:#fff;
+   padding:16px 16px 24px 16px;
+}
+   .courses_listing p {
+    line-height:40px;
+}
+#left_column_text {
+  width:60%;
+}/*to align the text to the video box. I tried to do it to the wrapper of both but it didn't work*/
+
+/*courses styles mobile*/
+
+@media only screen and (max-width: 480px) {
+  #learning_section_wrapper {
+    display:none;
+  }
+  #learning_section_wrapper_mobile {
+    display:block;
+  }
+  .course {
+    background-color:#d8d8d8;
+    width:100%;
+    margin-bottom:8px;
+    margin-left:16px;
+  }
+  .course h1 {
+    text-align:left;
+    margin:16px 16px 24px 16px;
+  }
+}
+
+/* thesis section styles*/
+
+#thesis_mobile {
+  display:none;
+}
+#thesis_title {
+  font-family:"Francois One", sans-serif;
+  font-size:2.7em;
+  text-align:center;
+  margin:32px 0;
+}
+#thesis {
+  margin: 32px 0 32px 24px;
+  display:flex;
+  justify-content:center;
+}
+#left_column_text h3 {
+  font-size:1.5rem;
+  font-weight:600;
+  margin-top:24px;
+  margin-bottom:8px;
+}
+#right_column {
+  width:40%;
+  display:flex;
+  flex-direction:column;
+}
+#right_first_box, #right_second_box {
+  display:flex;
+  align-items:center;
+}
+#video_box {
+  width:100%;
+}
+#left_column {
+  width:60%;
+  margin-right:24px;
+}
+
+#right_first_box img, #right_second_box img {
+  max-width:35%;
+  display:block;
+  margin:16px;
+  height:auto;
+}
+#right_first_box {
+  background-color:#d8d8d8;
+}
+#right_first_box h3, #right_second_box h3 {
+  font-size:1.5rem;
+  font-weight:600;
+  margin-bottom:8px;
+}
+#right_first_box h3, #right_second_box h3, #right_first_box p, #right_second_box p {
+  line-height:28px;
+} /* wasn't in the instructions but just threw it in..*/
+
+/*thesis mobile styles */
+
+@media only screen and (max-width: 480px) {
+  #thesis {
+    display:none;
+  }
+  #thesis_mobile {
+    display:block;
+    margin-bottom: 24px;
+  }
+  #thesis_title {
+    margin: 32px 0 16px 0;
+  }
+}
+
+/*footer styles*/
+
+#footer {
+  display:flex;
+  justify-content:space-between;
+  margin: 0 24px;
+}
+#footer_right {
+  display:flex;
+}
+#footer_right p:first-child {
+  margin-right: 18px;
+}
+.caption {
+  margin-right:1rem;
+}
+
+/*footer mobile styles*/
+
+@media only screen and (max-width: 480px) {
+  #footer_right {
+    display:none;
+  }
+  #footer {
+    padding: 16px 0;
+  }
+}
